@@ -10,4 +10,14 @@ describe("Pokedex", () => {
       ),
     ).toBeVisible();
   });
+  test("Navigating to a particular Pokemon", async ({ page }) => {
+    await page.goto("/");
+    await expect(page.getByText("ivysaur")).toBeVisible();
+    await page.getByRole('link', { name: "Ivysaur"}).click();
+    await expect(
+      page.getByText(
+        "Speed",
+      ),
+    ).toBeVisible();
+  });
 });
