@@ -6,8 +6,14 @@ const PORT = process.env.PORT || 5001
 
 app.use(express.static('dist'))
 
-app.get('/version', (req, res) => {
+app.get('/version', (_req, res) => {
   res.send('2')
+})
+
+app.get('/health', (_req, res) => {
+  // eslint-disable-next-line no-constant-condition
+  if (true) throw 'error... '
+  res.send('ok')
 })
 
 const start = async () => {
