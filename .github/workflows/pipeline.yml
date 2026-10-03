@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize]
 
 # Cancel any in-progress runs of this workflow if a new push happens on the same branch
 concurrency:
