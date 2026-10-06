@@ -24,5 +24,6 @@ const start = async () => {
 //random comment for new branch.
 //2nd random comment for a second commit
 //3rd random commit to see if #minor keyword working or not. #minor if added on comment should increase the minor version
+//4th random commit to see if #skip works or not.
 
 start()
