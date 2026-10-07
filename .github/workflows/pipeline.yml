@@ -49,9 +49,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Deployment Steps Below
+      - uses: actions/checkout@v6
       - name: Setup Flyctl
         uses: superfly/flyctl-actions/setup-flyctl@master
-
       - name: Deploy to Fly.io
         run: flyctl deploy --remote-only
         env:
@@ -85,7 +85,6 @@ jobs:
 
   notify_success:
     needs: [deploy]
-    if: ${{ success() }}
     runs-on: ubuntu-latest
     steps:
       - name: Discord Success Notification
@@ -104,7 +103,6 @@ jobs:
 
   tag_release:
     needs: [deploy]
-    if: ${{ success() }}
     runs-on: ubuntu-latest
     permissions:
       contents: write
