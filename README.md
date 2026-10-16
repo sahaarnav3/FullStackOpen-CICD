@@ -14,4 +14,7 @@ Start by running `npm install` inside the project folder
 
 
 ## Production 
-Link - `https://fullstackopen-cicd.fly.dev/`
+Link - [https://fullstackopen-cicd.fly.dev/](https://fullstackopen-cicd.fly.dev/)
+
+### Repo for exercise 21 & 22
+Link - [https://github.com/sahaarnav3/FullStackOpen-CICD-bloglist](https://github.com/sahaarnav3/FullStackOpen-CICD-bloglist)
